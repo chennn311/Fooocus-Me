@@ -62,20 +62,49 @@ def prepare_environment():
     return
 
 
-vae_approx_filenames = [
-    ('xlvaeapp.pth', 'https://huggingface.co/lllyasviel/misc/resolve/main/xlvaeapp.pth'),
-    ('vaeapp_sd15.pth', 'https://huggingface.co/lllyasviel/misc/resolve/main/vaeapp_sd15.pt'),
-    ('xl-to-v1_interposer-v3.1.safetensors',
-     'https://huggingface.co/lllyasviel/misc/resolve/main/xl-to-v1_interposer-v3.1.safetensors')
+checkpoint_downloads = [
+    (
+        "sd_xl_base_1.0_0.9vae.safetensors",
+        "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0_0.9vae.safetensors",
+    ),
 ]
 
+lora_downloads = [
+    (
+        "sd_xl_offset_example-lora_1.0.safetensors",
+        "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_offset_example-lora_1.0.safetensors",
+    ),
+    (
+        "lcm-lora-sdxl.safetensors",
+        "https://huggingface.co/latent-consistency/lcm-lora-sdxl/resolve/main/pytorch_lora_weights.safetensors",
+    ),
+    (
+        "lcm-lora-ssd-1b.safetensors",
+        "https://huggingface.co/latent-consistency/lcm-lora-ssd-1b/resolve/main/pytorch_lora_weights.safetensors",
+    ),
+]
+
+vae_approx_filenames = [
+    (
+        "taesdxl_decoder",
+        "https://github.com/madebyollin/taesd/raw/main/taesdxl_decoder.pth",
+    ),
+     ('xlvaeapp.pth', 'https://huggingface.co/lllyasviel/misc/resolve/main/xlvaeapp.pth'),
+    ('vaeapp_sd15.pth', 'https://huggingface.co/lllyasviel/misc/resolve/main/vaeapp_sd15.pt'),
+    ('xl-to-v1_interposer-v3.1.safetensors',
+     'https://huggingface.co/lllyasviel/misc/resolve/main/xl-to-v1_interposer-v3.1.safetensors'),
+]
 
 def download_models():
     for file_name, url in checkpoint_downloads.items():
         load_file_from_url(url=url, model_dir=path_checkpoints, file_name=file_name)
+    for file_name, url in checkpoint_downloads:
+        load_file_from_url(url=url, model_dir=path_checkpoints, file_name=file_name)
     for file_name, url in embeddings_downloads.items():
         load_file_from_url(url=url, model_dir=path_embeddings, file_name=file_name)
     for file_name, url in lora_downloads.items():
+        load_file_from_url(url=url, model_dir=path_loras, file_name=file_name)
+    for file_name, url in lora_downloads:
         load_file_from_url(url=url, model_dir=path_loras, file_name=file_name)
     for file_name, url in vae_approx_filenames:
         load_file_from_url(url=url, model_dir=path_vae_approx, file_name=file_name)
