@@ -63,10 +63,9 @@ def prepare_environment():
 
 
 checkpoint_filenames = [
-    (
-        "sd_xl_base_1.0_0.9vae.safetensors",
-        "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0_0.9vae.safetensors",
-    ),
+            (			"realisticStockPhoto_v10.safetensors",
+"https://huggingface.co/lllyasviel/fav_models/resolve/main/fav/realisticStockPhoto_v10.safetensors"),
+
 ]
 
 lora_filenames = [
@@ -82,6 +81,10 @@ lora_filenames = [
         "lcm-lora-ssd-1b.safetensors",
         "https://huggingface.co/latent-consistency/lcm-lora-ssd-1b/resolve/main/pytorch_lora_weights.safetensors",
     ),
+        (						"SDXL_FILM_PHOTOGRAPHY_STYLE_BetaV0.4.safetensors",
+
+"https://huggingface.co/lllyasviel/fav_models/resolve/main/fav/SDXL_FILM_PHOTOGRAPHY_STYLE_BetaV0.4.safetensors"), 
+
 ]
 
 vae_approx_filenames = [
