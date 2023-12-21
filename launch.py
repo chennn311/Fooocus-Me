@@ -62,14 +62,14 @@ def prepare_environment():
     return
 
 
-checkpoint_downloads = [
+checkpoint_filenames = [
     (
         "sd_xl_base_1.0_0.9vae.safetensors",
         "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0_0.9vae.safetensors",
     ),
 ]
 
-lora_downloads = [
+lora_filenames = [
     (
         "sd_xl_offset_example-lora_1.0.safetensors",
         "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_offset_example-lora_1.0.safetensors",
@@ -98,13 +98,13 @@ vae_approx_filenames = [
 def download_models():
     for file_name, url in checkpoint_downloads.items():
         load_file_from_url(url=url, model_dir=path_checkpoints, file_name=file_name)
-    for file_name, url in checkpoint_downloads:
+    for file_name, url in checkpoint_filenames:
         load_file_from_url(url=url, model_dir=path_checkpoints, file_name=file_name)
     for file_name, url in embeddings_downloads.items():
         load_file_from_url(url=url, model_dir=path_embeddings, file_name=file_name)
     for file_name, url in lora_downloads.items():
         load_file_from_url(url=url, model_dir=path_loras, file_name=file_name)
-    for file_name, url in lora_downloads:
+    for file_name, url in lora_filenames:
         load_file_from_url(url=url, model_dir=path_loras, file_name=file_name)
     for file_name, url in vae_approx_filenames:
         load_file_from_url(url=url, model_dir=path_vae_approx, file_name=file_name)
