@@ -65,6 +65,8 @@ def prepare_environment():
 checkpoint_filenames = [
             (			"realisticStockPhoto_v10.safetensors",
 "https://huggingface.co/lllyasviel/fav_models/resolve/main/fav/realisticStockPhoto_v10.safetensors"),
+            (           "OpenDall-E.safetensors",
+"https://huggingface.co/dataautogpt3/OpenDalleV1.1/resolve/main/OpenDalleV1.1.safetensors?download=true"),
 
 ]
 
