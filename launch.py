@@ -63,10 +63,15 @@ def prepare_environment():
 
 
 checkpoint_filenames = [
-            (			"realisticStockPhoto_v10.safetensors",
-"https://huggingface.co/lllyasviel/fav_models/resolve/main/fav/realisticStockPhoto_v10.safetensors"),
-            (           "OpenDall-E.safetensors",
-"https://huggingface.co/dataautogpt3/OpenDalleV1.1/resolve/main/OpenDalleV1.1.safetensors?download=true"),
+(			"realisticStockPhoto_v10.safetensors",
+"https://huggingface.co/lllyasviel/fav_models/resolve/main/fav/realisticStockPhoto_v10.safetensors"
+),
+(           "OpenDall-E.safetensors",
+"https://huggingface.co/dataautogpt3/OpenDalleV1.1/resolve/main/OpenDalleV1.1.safetensors?download=true"
+),
+(           "FenrisXL.safetensors",
+"https://civitai.com/api/download/models/247304"
+),
 
 ]
 
@@ -83,9 +88,13 @@ lora_filenames = [
         "lcm-lora-ssd-1b.safetensors",
         "https://huggingface.co/latent-consistency/lcm-lora-ssd-1b/resolve/main/pytorch_lora_weights.safetensors",
     ),
-        (						"SDXL_FILM_PHOTOGRAPHY_STYLE_BetaV0.4.safetensors",
+    (						"SDXL_FILM_PHOTOGRAPHY_STYLE_BetaV0.4.safetensors",
 
-"https://huggingface.co/lllyasviel/fav_models/resolve/main/fav/SDXL_FILM_PHOTOGRAPHY_STYLE_BetaV0.4.safetensors"), 
+"https://huggingface.co/lllyasviel/fav_models/resolve/main/fav/SDXL_FILM_PHOTOGRAPHY_STYLE_BetaV0.4.safetensors"
+    ), 
+    (                       "HarrlogosXL.safetensors",
+     "https://civitai.com/api/download/models/214296"
+    ),
 
 ]
 
