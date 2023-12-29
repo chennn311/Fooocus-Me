@@ -1,7 +1,7 @@
 {
     "default_model": "newrealityxlAllInOne_14Bkdvae.safetensors",
     "default_refiner": "fReel_Photo_v2.safetensors",
-    "default_refiner_switch": 0.5,
+    "default_refiner_switch": 0.4,
     "default_loras": [
         [
             "SDXL_FILM_PHOTOGRAPHY_STYLE_BetaV0.4.safetensors",
@@ -24,7 +24,7 @@
             1.0
         ]
     ],
-    "default_cfg_scale": 7.0,
+    "default_cfg_scale": 4.0,
     "default_sample_sharpness": 2.0,
     "default_sampler": "dpmpp_2m",
     "default_scheduler": "karras",
